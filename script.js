@@ -1,31 +1,6 @@
 $(document).ready(function() {
     //////////////////////////
    // –––––––– Navbar
-   
-   //const nav = document.querySelector('.navbar_component');
-   
-   //if (nav.getAttribute('fs-navbar') === 'is-light') {
-   //  const navText = document.querySelectorAll('.navbar_dropdown-toggle');
-   //  const navLogo = document.querySelector('.navbar_logo.is-normal');
-   //  const navDrop = document.getElementsByClassName('navbar_dropdown-list');
-   //  const navDropLink = document.getElementsByClassName('navbar_dropdown-link');
-   
-   //  var tl = gsap.timeline({  
-   //    scrollTrigger: {
-   //      trigger: '.main-wrapper',
-   //      scrub: 0.1,
-   //      start: 'top top',
-   //      end: '2.5% top',
-   //      markers: false
-   //    }
-   //  });
-   
-   //  tl.to(nav,{background: "#fff"})
-   //    .to(navText, {color:"#163767"},'<')
-   //    .to(navLogo, {autoAlpha: 1},'<')
-   //    .fromTo(navDrop, {backgroundColor: 'transparent'},{backgroundColor: '#fff'},'<')
-   //    .fromTo(navDropLink, {color: '#fff'},{color: '#163767'},'<');
-   //}
 
     window.addEventListener('scroll', function() {
     let scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
