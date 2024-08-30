@@ -27,21 +27,20 @@ $(document).ready(function() {
    //    .fromTo(navDropLink, {color: '#fff'},{color: '#163767'},'<');
    //}
 
-   window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function() {
     let scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
     let navbar = document.querySelector('[fs-navbar]');
-    if (navbar.getAttribute('fs-navbar') === 'is-dark') {
-     navbar.classList.add("is-dark");
- }
     if (navbar) {
         if (scrollPercentage > 2.5 && navbar.getAttribute('fs-navbar') !== 'is-dark') {
             navbar.setAttribute('fs-navbar', 'is-dark');
-        } 
-        else if (scrollPercentage <= 2.5 && navbar.getAttribute('fs-navbar') !== '' && navbar.classList.contains("is-dark")) {
+            navbar.classList.add('is-transparent');
+        } else if (scrollPercentage < 2.5 && navbar.getAttribute('fs-navbar') === 'is-dark' && navbar.classList.contains('is-transparent')) {
             navbar.setAttribute('fs-navbar', '');
-        }
+        } else 
+        return;
     }
- });
+    });
+}
    
    //////////////////////////
    // –––––––– Breadcrumb nav
