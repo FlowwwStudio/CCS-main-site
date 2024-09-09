@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function() {
   gsap.registerPlugin(ScrollTrigger);
 
   const trigger = Array.from(

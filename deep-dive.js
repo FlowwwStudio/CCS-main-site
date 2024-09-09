@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function() {
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
   const mainWrapper = document.querySelector(".main-wrapper");
