@@ -1,10 +1,5 @@
-import { gsap } from "gsap";
-
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
 document.addEventListener('DOMContentLoaded', function() {
+  gsap.registerPlugin(ScrollTrigger);
 
   const trigger = Array.from(
     document.querySelectorAll("[fs-video^='trigger']")
