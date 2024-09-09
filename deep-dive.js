@@ -1,8 +1,5 @@
-// This function will initialize your code once GSAP is available
-function initializeGSAPDependentCode() {
-  document.addEventListener('DOMContentLoaded', function() {
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-      gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function() {
+  gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 
       const mainWrapper = document.querySelector(".main-wrapper");
       const pageWrapper = document.querySelector(".page-wrapper");
@@ -237,19 +234,4 @@ function initializeGSAPDependentCode() {
             );
         });
       });
-    } else {
-      console.error("GSAP or ScrollTrigger is not loaded.");
-    }
   });
-}
-
-// Check if GSAP is loaded before initializing the code
-if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-  window.addEventListener('load', function() {
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-      initializeGSAPDependentCode();
-    }
-  });
-} else {
-  initializeGSAPDependentCode();
-}
