@@ -39,9 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
        .to(breadText, {color:"#163767"},'<')
        .to(breadIcons, {color:"#163767"},'<');
    }
-   
-   
-   
    //////////////////////////
    // ––––––– Contact section animations made with GSAP
    
@@ -50,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
    if (sectionContact) {
    
    const items = Array.from(document.querySelectorAll(".contact_list-item"));
-   const icons = document.querySelectorAll(".icon-embed-medium");
+   const icons = document.querySelectorAll("[fs-icon='contact']");
    const content = document.querySelectorAll(".contact_content");
    const contentList = document.querySelectorAll(".contact_content_list");
    let contentListItem = document.querySelectorAll(".contact_content_list-item");

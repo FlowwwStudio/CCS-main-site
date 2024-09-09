@@ -1,5 +1,10 @@
+import { gsap } from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 document.addEventListener('DOMContentLoaded', function() {
-  gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
   const mainWrapper = document.querySelector(".main-wrapper");
   const pageWrapper = document.querySelector(".page-wrapper");
