@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const close = gsap.timeline({ paused: true });
       let hoverBlock = item.querySelector(".contact_hover-block");
       let header = item.querySelector(".heading-style-h3");
-      let icon = item.querySelector(".icon-embed-medium");
+      let icon = item.querySelector("[fs-icon='contact']");
       let expander = item.querySelector(".contact_expander");
       let imageLoader = item.querySelector(".contact_image-loader");
       let contentListItem = item.querySelectorAll(".contact_content_list-item");
