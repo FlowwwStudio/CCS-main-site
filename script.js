@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     gsap.set(icons, { rotation: 0 });
     gsap.set(contentListItem, { opacity: 0, yPercent: 30 });
-
+    
     items.forEach((item) => {
       const hover = gsap.timeline({ paused: true });
       const open = gsap.timeline({ paused: true });
@@ -76,7 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
       let imageLoader = item.querySelector(".contact_image-loader");
       let contentListItem = item.querySelectorAll(".contact_content_list-item");
       let contactHeader = item.querySelector(".contact_header");
-
+      
+      gsap.set(expander, { height: "0vh", backgroundColor: "transparent" });
       // ––––––– Hover animation
       hover
         .to(hoverBlock, { height: "100%", duration: 0.6, ease: "power3.inOut" })
