@@ -299,17 +299,6 @@ animations.forEach((animation) => {
     });
   
     const obj = { currentFrame: 0 };
-
-    // Create an Intersection Observer to lazy load images
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = document.querySelector(imgSelector);
-          img.src = images[obj.currentFrame]; // Load the current frame image
-          observer.unobserve(entry.target); // Stop observing after loading
-        }
-      });
-    });
   
     gsap.to(obj, {
       currentFrame: frameCount - 1,
@@ -322,7 +311,7 @@ animations.forEach((animation) => {
         scrub: true,
         onEnter: () => {
           const img = document.querySelector(imgSelector);
-          observer.observe(img); // Start observing the image for lazy loading
+          img.src = images[obj.currentFrame]; // Load the current frame image
         },
       },
       onUpdate: () => {
