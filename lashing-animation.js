@@ -289,6 +289,21 @@ const animations = [
 
 animations.forEach((animation) => {
     const { trigger, imgSelector, images } = animation;
+
+     // Check if trigger element exists in DOM
+     const triggerElement = document.querySelector(trigger);
+     if (!triggerElement) {
+         console.warn(`Trigger element "${trigger}" not found in DOM. Skipping animation.`);
+         return; // Skip this animation and continue with next
+     }
+ 
+     // Check if image element exists in DOM
+     const imageElement = document.querySelector(imgSelector);
+     if (!imageElement) {
+         console.warn(`Image element "${imgSelector}" not found in DOM. Skipping animation.`);
+         return; // Skip this animation and continue with next
+     }
+     
     const frameCount = images.length;
   
     // Preload images
