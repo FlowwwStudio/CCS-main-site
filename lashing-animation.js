@@ -2,8 +2,11 @@ class Application {
   constructor(canvasElement) {
       this.canvas = canvasElement;
       this.ctx = this.canvas.getContext('2d');
-      this.canvas.width = window.innerWidth;
-      this.canvas.height = window.innerHeight;
+      
+      // Update canvas size to match its parent element
+      const parent = this.canvas.parentElement;
+      this.canvas.width = parent.clientWidth;
+      this.canvas.height = parent.clientHeight;
       this.canvas.style.backgroundColor = 'transparent';
 
       // Initialize properties
