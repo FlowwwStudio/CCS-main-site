@@ -1,4 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Initialize when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  // Check if GSAP is already loaded
+  if (typeof gsap !== 'undefined') {
+    initVideoAnimations();
+  } else {
+    // If GSAP isn't loaded yet, wait for it
+    const checkGSAP = setInterval(() => {
+      if (typeof gsap !== 'undefined') {
+        clearInterval(checkGSAP);
+        initVideoAnimations();
+      }
+    }, 100);
+
+    // Stop checking after 10 seconds to prevent infinite loop
+    setTimeout(() => {
+      clearInterval(checkGSAP);
+      if (typeof gsap === 'undefined') {
+        console.error('GSAP failed to load after 10 seconds');
+      }
+    }, 10000);
+  }
+});
+
+function initVideoAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
   const trigger = Array.from(
@@ -137,4 +161,4 @@ document.addEventListener("DOMContentLoaded", function () {
   playVideo.forEach((video) => {
     observer.observe(video);
   });
-});
+}
