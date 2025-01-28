@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
           clearInterval(checkGSAP);
           initContactAnimations();
         }
-      }, 100);
+      }, 1000);
 
       // Stop checking after 10 seconds to prevent infinite loop
       setTimeout(() => {

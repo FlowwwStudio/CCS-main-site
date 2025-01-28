@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         clearInterval(checkGSAP);
         initDeepDive();
       }
-    }, 100);
+    }, 1000);
 
     // Stop checking after 10 seconds to prevent infinite loop
     setTimeout(() => {
