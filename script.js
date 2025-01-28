@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (typeof gsap === 'undefined') {
             console.error('GSAP failed to load after 10 seconds');
           }
-        }, 10000);
+        }, 3000);
       }
     
 
