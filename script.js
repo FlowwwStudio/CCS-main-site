@@ -68,11 +68,11 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }, 300);
 
-        // Stop checking after 10 seconds to prevent infinite loop
+        // Stop checking after 3 seconds to prevent infinite loop
         setTimeout(() => {
           clearInterval(checkGSAP);
           if (typeof gsap === 'undefined') {
-            console.error('GSAP failed to load after 10 seconds');
+            console.error('GSAP failed to load after 3 seconds');
           }
         }, 3000);
       }
