@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         clearInterval(checkGSAP);
         initVideoAnimations();
       }
-    }, 1000);
+    }, 300);
 
     // Stop checking after 10 seconds to prevent infinite loop
     setTimeout(() => {
