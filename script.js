@@ -55,29 +55,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const sectionContact = document.querySelector(".section_contact");
 
-  // Initialize when DOM is loaded
-  document.addEventListener("DOMContentLoaded", () => {
+
     // Check if GSAP is already loaded
     if (typeof gsap !== 'undefined') {
       initContactAnimations();
-    } else {
-      // If GSAP isn't loaded yet, wait for it
-      const checkGSAP = setInterval(() => {
-        if (typeof gsap !== 'undefined') {
-          clearInterval(checkGSAP);
-          initContactAnimations();
-        }
-      }, 300);
+      } else {
+        // If GSAP isn't loaded yet, wait for it
+        const checkGSAP = setInterval(() => {
+          if (typeof gsap !== 'undefined') {
+            clearInterval(checkGSAP);
+            initContactAnimations();
+          }
+        }, 300);
 
-      // Stop checking after 10 seconds to prevent infinite loop
-      setTimeout(() => {
-        clearInterval(checkGSAP);
-        if (typeof gsap === 'undefined') {
-          console.error('GSAP failed to load after 10 seconds');
-        }
-      }, 10000);
-    }
-  });
+        // Stop checking after 10 seconds to prevent infinite loop
+        setTimeout(() => {
+          clearInterval(checkGSAP);
+          if (typeof gsap === 'undefined') {
+            console.error('GSAP failed to load after 10 seconds');
+          }
+        }, 10000);
+      }
+    
 
   function initContactAnimations() {
     const sectionContact = document.querySelector(".section_contact");
