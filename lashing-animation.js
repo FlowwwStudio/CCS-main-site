@@ -105,7 +105,7 @@ class Application {
       img.onload = () => {
           this.loadedImages++;
           if (this.loadedImages === this.totalImages) {
-              console.log(`All images loaded for canvas: ${this.canvas.id}`);
+              //console.log(`All images loaded for canvas: ${this.canvas.id}`);
               this.addEventListeners();
               this.render();
           }
@@ -115,7 +115,7 @@ class Application {
           console.error(`Error loading image ${index} for canvas ${this.canvas.id}:`, e);
       };
 
-      console.log(`Canvas "${this.canvas.id}" loading image: ${url}`);
+      //console.log(`Canvas "${this.canvas.id}" loading image: ${url}`);
       img.src = url;
       this.images.push(img);
   }
